@@ -1,0 +1,102 @@
+@import 'vars';
+@import 'animations';
+
+* {
+    padding: 0;
+    margin: auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+#webcam-footer {
+    width: 640px;
+    height: 60px;
+    color: white;
+    margin: 22px auto;
+    position: relative;
+    border-radius: $border-width;
+    border: $default--border-color $border-width solid;
+    background-color: $default--background-color;
+
+    .center-circle {
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        width: 104px;
+        height: 104px;
+        display: flex;
+        border: inherit;
+        overflow: hidden;
+        border-width: 8px;
+        border-radius: 50%;
+        position: absolute;
+        background: inherit;
+        transform: translateX(-50%) translateY(-50%);
+
+        .center-circle--wrapper {
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            position: relative;
+            
+            .logo {
+                width: 70%;
+                height: 70%;
+                background: $logo;
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+
+    .content {
+        // z-index: 1;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        border: inherit;
+        border-width: 0;
+        overflow: hidden;
+        position: relative;
+        background: inherit;
+
+        .activity-wrapper {
+            width: 50%;
+            height: 100%;
+            padding-left: 0;
+            padding-right: 60px;
+            transition: all 300ms ease-in-out;
+
+            // Test
+            &.move {
+                transform: translateY(-100%);
+            }
+
+            @import 'components/activity--element';
+
+            &:last-of-type {
+                padding-right: 0;
+                padding-left: 60px;
+
+                .activity--element {
+                    flex-direction: row-reverse;
+
+                    .label {
+                        text-align: left;
+                    }
+                    .value {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}

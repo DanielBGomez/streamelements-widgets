@@ -1,0 +1,121 @@
+.activity--element {
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+
+    .label {
+        flex-grow: 1;
+        overflow: hidden;
+        margin: auto 12px;
+        text-align: right;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .value {
+        margin-right: 0;
+        position: relative;
+        display: inline-flex;
+
+        &:before {
+            content: '♥';
+            width: 24px;
+            height: 24px;
+            margin-right: 4px;
+            display: inline-block;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        &:after {
+            content: '';
+            left: 60%;
+            opacity: 0;
+            bottom: 40%;
+            color: white;
+            font-size: small;
+            position: absolute;
+        }
+
+        &[data-add]:after {
+            content: '+'attr(data-add);
+            animation: value-adition 1s linear forwards;
+        }
+
+        // Variants
+        &.bits {
+            color: $default--bits-color;
+
+            &:before {
+                content: '';
+                background-image: $bits;
+            }
+        }
+        &.sub-gifter {
+            color: $default--sub-gifter-color;
+
+            &:before {
+                content: 'redeem';
+                font-size: 24px;
+                font-family: 'Material Icons';
+            }
+        }
+        &.stars {
+            color: $default--stars-color;
+
+            &:before {
+                content: 'star_border';
+                font-size: 24px;
+                font-family: 'Material Icons';
+            }
+        }
+        &.donation {
+            color: $default--stars-color;
+
+            &:before {
+                content: 'monetization_on';
+                font-size: 24px;
+                font-family: 'Material Icons';
+            }
+        }
+        &.follow {
+            color: $default--follow-color;
+
+            &:before {
+                content: 'favorite';
+                font-size: 24px;
+                font-family: 'Material Icons';
+            }
+        }
+        &.sub {
+            color: $default--sub-color;
+
+            &:before {
+                content: '';
+                background: $sub;
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+
+    // &:not(.active){
+    //     .label,
+    //     .value,
+    //     .value:before {
+    //         transform: translateY(100%);
+    //     }
+    // }
+    // &.active {
+    //     .label {
+    //         animation: slide-up 300ms 100ms ease-out forwards;
+    //     }
+    //     .value {
+    //         animation: slide-up 300ms 50ms ease-out forwards;
+
+    //         &:before {
+    //             animation: slide-up 300ms 0ms ease-out forwards;
+    //         }
+    //     } 
+    // }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "webcam-footer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile-styles": "sass src/styles/_styles.scss dist/styles.css --style compressed",
+    "watch-styles": "npm run compile-styles -- --watch"
+  },
+  "author": "Daniel B Gomez",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.26.10"
+  }
+}
