@@ -10,6 +10,8 @@
   "author": "Daniel B Gomez",
   "license": "ISC",
   "devDependencies": {
-    "sass": "^1.26.10"
+    "browserify": "^16.5.2",
+    "sass": "^1.26.10",
+    "watchify": "^3.11.1"
   }
 }
