@@ -1,0 +1,29 @@
+.center-circle {
+    top: 50%;
+    left: 50%;
+    width: 104px;
+    height: 104px;
+    display: flex;
+    overflow: hidden;
+    border-radius: 50%;
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    
+    &.center-circle--style {
+        border: inherit;
+        border-width: 8px;
+        background: inherit;
+    }
+    &.center-circle--elements {
+        z-index: 3;
+        
+        .logo {
+            width: 55%;
+            height: 55%;
+            background: $logo;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+}
