@@ -20,6 +20,7 @@ html {
     color: white;
     margin: 22px auto;
     position: relative;
+    box-shadow: $element-shadow;
     border-radius: $border-width;
     border: $default--border-color $border-width solid;
     background-color: $default--background-color;
