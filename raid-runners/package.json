@@ -1,0 +1,20 @@
+{
+  "name": "raid-runners",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile-styles": "sass src/styles/_styles.scss dist/styles.css",
+    "watch-styles": "npm run compile-styles -- --watch",
+    "watch-scripts": "watchify src/scripts/scripts.js -o dist/scripts.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": "^16.5.2",
+    "matter-js": "^0.14.2",
+    "sass": "^1.26.11",
+    "watchify": "^3.11.1"
+  }
+}
